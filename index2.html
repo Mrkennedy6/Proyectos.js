@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar y Ocultar Contenido</title>
+    <style>
+        /* Establecer inicialmente el párrafo oculto */
+        #parrafo {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="parrafo">Este es el contenido que se mostrará u ocultará.</p>
+    <button id="boton">Mostrar contenido</button>
+
+    <script>
+        // Obtener el párrafo y el botón por su ID
+        const parrafo = document.getElementById('parrafo');
+        const boton = document.getElementById('boton');
+
+        // Agregar un escuchador de eventos para el clic del botón
+        boton.addEventListener('click', function() {
+            // Verificar si el párrafo está oculto o visible
+            if (parrafo.style.display === 'none') {
+                // Si está oculto, mostrarlo y cambiar el texto del botón
+                parrafo.style.display = 'block';
+                boton.textContent = 'Ocultar contenido';
+            } else {
+                // Si está visible, ocultarlo y cambiar el texto del botón
+                parrafo.style.display = 'none';
+                boton.textContent = 'Mostrar contenido';
+            }
+        });
+    </script>
+
+</body>
+</html>

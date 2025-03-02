@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualizar Contenido</title>
+</head>
+<body>
+    <h1 id="titulo">¡Bienvenido a mi página!</h1>
+    <p id="parrafo">Este es el contenido inicial</p>
+    <button id="boton">Actualizar Contenido</button>
+
+    <script>
+        // Obtener los elementos por su ID
+        const titulo = document.getElementById('titulo');
+        const parrafo = document.getElementById('parrafo');
+        const boton = document.getElementById('boton');
+
+        // Agregar un escuchador de evento para el clic del botón
+        boton.addEventListener('click', function() {
+            // Cambiar el contenido del título y el párrafo
+            titulo.innerHTML = '¡Contenido actualizado!';
+            parrafo.innerHTML = 'El contenido ha sido cambiado';
+        });
+    </script>
+</body>
+</html>
